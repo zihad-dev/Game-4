@@ -1,0 +1,30 @@
+.error {
+  color: red;
+}
+.guess {
+  display: none;
+}
+.guess2 {
+  display: none;
+}
+.player {
+  display: none;
+}
+.namberBox {
+  display: none;
+}
+.namberbtn {
+  display: none;
+}
+.updatbtn {
+  display: none;
+}
+.namberBox2 {
+  display: none;
+}
+.namberbtn2 {
+  display: none;
+}
+img {
+  display: none;
+}
