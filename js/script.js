@@ -122,16 +122,16 @@ namberbtn2.addEventListener("click", function () {
   if (isNaN(namberBox2.value)) {
     namberBox2.value = "";
     console.log("not");
-  } else if (Number(namberBox2.value) < 0 || Number(namberBox2.value) > 10) {
+  } else if (namberBox2.value < 0 || namberBox2.value > 10) {
     namberBox2.value = "";
     error.innerHTML = "Please Enter a number less than 10 and greater than 0";
   } else {
     error.innerHTML = "";
-    if (Number(box.value) === Number(namberBox.value) && Number(box.value) === Number(namberBox2.value)) {
+    if (box.value === namberBox.value && box.value === namberBox2.value) {
       result("Player 2 & Player 3 win");
-    } else if (Number(box.value) === Number(namberBox2.value)) {
+    } else if (box.value === namberBox2.value) {
       result("Player 3 win");
-    } else if (Number(box.value) === Number(namberBox.value)) {
+    } else if (box.value === namberBox.value) {
       result("Player 2 win");
     } else {
       if (count2 > 1) {
