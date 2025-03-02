@@ -17,12 +17,14 @@ let listArr = [];
 
 let count = 5;
 let count2 = 5;
-let updatindex;
+// let updatindex;
 btn.addEventListener("click", function () {
   let inputValue = box.value.trim();
   if (!inputValue) {
     error.innerHTML = "Please Enter Your value";
-  } else if (isNaN(box.value)) {
+  }else if (isNaN(box.value)) {
+    console.log("enter a number");
+    
     error.innerHTML = "";
     list.innerHTML = "";
     listArr.push(box.value.trim());
@@ -83,12 +85,11 @@ btn.addEventListener("click", function () {
 namberbtn.addEventListener("click", function () {
   if (isNaN(namberBox.value)) {
     namberBox.value = "";
-    console.log("not");
   } else if (namberBox.value < 0 || namberBox.value > 10) {
     namberBox.value = "";
     error.innerHTML = "Please Enter less then 10 and greater then 0";
   } else {
-    namberBox.value=""
+   
     error.innerHTML = "";
     if (count > 1) {
       count--;
@@ -121,24 +122,24 @@ namberbtn2.addEventListener("click", function () {
   if (isNaN(namberBox2.value)) {
     namberBox2.value = "";
     console.log("not");
-  } else if (namberBox2.value < 0 || namberBox2.value > 10) {
+  } else if (Number(namberBox2.value) < 0 || Number(namberBox2.value) > 10) {
     namberBox2.value = "";
-    error.innerHTML = "Please Enter less then 10 and greater then 0";
+    error.innerHTML = "Please Enter a number less than 10 and greater than 0";
   } else {
-    namberBox2.value = "";
     error.innerHTML = "";
-    if (count2 > 1) {
-      count2--;
-      span2.innerHTML = count2;
-      if (box.value == namberBox.value && box.value == namberBox2.value) {
-        result("Player 2 & Player 3 win");
-      } else if (box.value == namberBox2.value) {
-        result("Player 3 win");
-      } else if (box.value == namberBox.value) {
-        result("Player 2 win");
-      }
+    if (Number(box.value) === Number(namberBox.value) && Number(box.value) === Number(namberBox2.value)) {
+      result("Player 2 & Player 3 win");
+    } else if (Number(box.value) === Number(namberBox2.value)) {
+      result("Player 3 win");
+    } else if (Number(box.value) === Number(namberBox.value)) {
+      result("Player 2 win");
     } else {
-      result("Player 1 win");
+      if (count2 > 1) {
+        count2--;
+        span2.innerHTML = count2;
+      } else {
+          result("Player 1 win");
+      }
     }
   }
 });
