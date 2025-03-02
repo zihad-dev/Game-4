@@ -48,7 +48,6 @@ btn.addEventListener("click", function () {
           for (let j = 0; j < editbtnArr.length; j++) {
             editbtnArr[j].addEventListener("click", function () {
               box.value = listArr[j];
-              console.log(editbtnArr);
               btn.style.display = "none";
               updatbtn.style.display = "inline-block";
               updatindex = j;
@@ -89,6 +88,7 @@ namberbtn.addEventListener("click", function () {
     namberBox.value = "";
     error.innerHTML = "Please Enter less then 10 and greater then 0";
   } else {
+    namberBox.value=""
     error.innerHTML = "";
     if (count > 1) {
       count--;
@@ -125,6 +125,7 @@ namberbtn2.addEventListener("click", function () {
     namberBox2.value = "";
     error.innerHTML = "Please Enter less then 10 and greater then 0";
   } else {
+    namberBox2.value = "";
     error.innerHTML = "";
     if (count2 > 1) {
       count2--;
